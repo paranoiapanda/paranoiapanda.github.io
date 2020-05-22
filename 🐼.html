@@ -1,0 +1,84 @@
+<html> 
+<head>
+<meta charset="utf-8">
+ <meta property="og:image:height" content="411">
+<meta property="og:image:width" content="785">
+<meta property="og:title" content="🐼">
+<meta property="og:description" content="🐼">
+
+<meta property="og:image" content="https://tinypng.com/images/apng/panda-waving.png">
+<meta property="og:type" content="article">
+<title>🐼</title>
+</head> 
+<body>
+<style>
+body, html {
+overflow:hidden;
+padding: 0;
+margin: 0;
+}
+#canvas, #cont {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  color: red;
+  display: grid;
+  place-items: center;
+  font-size: 120pt;
+  font-family: Arial;
+  font-weight: bold;
+}
+.text {
+  position: absolute;
+  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+}
+</style>
+<canvas id="canvas"></canvas>
+<div id="cont">
+<div class="text" style="z-index: 1;"}>🐼</div>
+<img src="https://starbucksiswrong.com/image.php?id=9C6SOS.png">
+</div>
+<script>
+let x, y;
+const text = document.querySelector('.text');
+const things = Array.from(Array(35), _ => { const e = document.createElement('div'); e.innerText = text.innerText; e.className = "text"; cont.appendChild(e); return e; });
+const m = Array.from(Array(things.length), _ => ({x: 0, y: 0}));
+const c = canvas.getContext('2d');
+const loop = () => {
+  window.requestAnimationFrame(loop);
+  c.fillStyle = "black";
+  c.fillRect(0, 0, canvas.width, canvas.height);
+  c.fillStyle = "white";
+c.beginPath();
+  for(let i = 0; i < 100; i++) {
+    c.arc(
+      Math.random() * window.innerWidth,
+      Math.random() * window.innerHeight,
+      5, 0, Math.PI * 2
+    );
+  }
+c.fill();
+  m.pop();
+  m.unshift({x, y})
+  things.forEach((thing, i) => { 
+    thing.style.transform = `translate(${m[i].x * i}px, ${m[i].y * i}px)`;
+  });
+};
+const resize = () => { canvas.width = window.innerWidth; canvas.height = window.innerHeight; loop();};
+window.addEventListener('resize', resize);
+resize();
+window.addEventListener('mousemove', ev => {
+  const w = window.innerWidth;
+  const h = window.innerHeight;
+  const cX = w / 2;
+  const cY = h / 2;
+  const O = 0.2;
+  const dX = -(ev.x - cX) * O;
+  const dY = -(ev.y - cY) * O;
+  x = dX;
+  y = dY;
+});
+</script>
+</body>
+</html>
+    
