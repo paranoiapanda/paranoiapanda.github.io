@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+    <channel>
+        <title></title>
+        <link>undefined</link>
+        <description>undefined</description>
+        <lastBuildDate>Mon, 27 Feb 2023 00:54:36 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>Joplin Pages Publisher</generator>
+        <item>
+            <title><![CDATA[Knowledge / Wisdom]]></title>
+            <guid>4d64c45b28f547c1a61328f4d39dee03</guid>
+            <pubDate>Mon, 27 Feb 2023 00:49:02 GMT</pubDate>
+            <content:encoded><![CDATA[There’s an old Chinese proverb that goes something like this: If you want to get knowledge, add something every day. If you want to achieve wisdom, subtract something every day.]]></content:encoded>
+        </item>
+    </channel>
+</rss>
